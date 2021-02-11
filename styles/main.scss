@@ -1,0 +1,151 @@
+@import "./media-queries.scss";
+@import "./keyframes.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@200&display=swap');
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#__next {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  clip-path: polygon(90% 0, 100% 0, 100% 90%, 15% 100%, 0 100%, 0 15%);
+  @include mobile{
+    clip-path: none;
+  }
+}
+
+img{
+  height: 300px;
+}
+
+h1, h2, h3{
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-position: under;
+  margin-bottom: 12px;
+}
+
+main{
+  margin: 10vh auto;
+  height: 80vh;
+  width: 90vw;
+  max-width: 1500px;
+  display: grid;
+  grid-template-columns: .2fr minmax(300px, 1fr) .2fr;
+  grid-template-rows: .2fr 1fr .2fr;
+  place-items: center;
+  overflow: hidden;
+  animation: to-visible 6s forwards;
+  gap: 2em;
+
+  button{
+    all: unset;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+  
+    path{
+      fill: #fff;
+    }
+  }
+
+  .me {
+    grid-column: 3;
+    grid-row: 2;
+    width: max-content;
+  }
+
+  .info {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include maxDown{
+      flex-direction: column;
+      height: 100px;
+    }
+
+    @include mobile{
+      flex-direction: row;
+      height: auto;
+    }
+
+    a{
+      text-decoration: underline;
+      text-underline-position: under;
+      color: #fff;
+    }
+  }
+  
+
+  .previous-button {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    transform: rotate(180deg);
+    &.disabled{
+      opacity: 0.2;
+    }
+  }
+
+  .step-container{
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .next-button {
+    grid-column: 2;
+    grid-row: 3;
+
+    &.disabled{
+      opacity: 0.2;
+    }
+  }
+
+  @include mobile{
+    grid-template-rows: .2fr .2fr 1fr .2fr;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    gap: .5em;
+
+    .previous-button{
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .info{
+      grid-column: 1;
+      grid-row: 1;
+      justify-content: space-evenly;
+      padding-top: 1em;
+    }
+    .step-container{
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    .next-button{
+      grid-column: 1;
+      grid-row: 4;
+    }
+
+    .me{
+      display: none;
+    }
+  }
+}
+
