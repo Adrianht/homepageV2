@@ -30,13 +30,13 @@ const Main = () => {
 
   return (
     <main>
-      <ChevronButton style={{transform: "rotate(176deg)"}} class={checkDisabled(1, 'previous') ? 'previous-button disabled' : 'previous-button'} onChildClick={lessenIndex} disable={checkDisabled(1, 'previous')} />
+      <ChevronButton style={{transform: "rotate(176deg)"}} class={checkDisabled(1, 'previous') ? 'previous-button disabled' : 'previous-button'} onChildClick={lessenIndex} disable={checkDisabled(1, 'previous')} srText="Previous project" />
       <Me />
-      <div className="step-container" key={currentStepIndex}>
+      <section className="step-container" key={currentStepIndex}>
         <Card currentStepIndex={currentStepIndex} panel={panels[currentStepIndex]} dir={direction}/>
-      </div>
+      </section>
       <Info />
-      <ChevronButton class={checkDisabled(panels.length - 1, 'next') ? 'next-button disabled' : 'next-button'} onChildClick={bumpIndex} disable={checkDisabled(panels.length - 1, 'next')} />
+      <ChevronButton class={checkDisabled(panels.length - 1, 'next') ? 'next-button disabled' : 'next-button'} onChildClick={bumpIndex} disable={checkDisabled(panels.length - 1, 'next')} srText="Next project" />
     </main>
   );
 }
