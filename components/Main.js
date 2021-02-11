@@ -8,7 +8,7 @@ import ChevronButton from './ChevronButton';
 
 const Main = () => {
   let [currentStepIndex, setCurrentStepIndex] = useState(0);
-  let [direction, setDirection] = useState('down');
+  let [direction, setDirection] = useState('');
 
   function bumpIndex() {
     setCurrentStepIndex(currentStepIndex + 1);

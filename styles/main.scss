@@ -54,7 +54,7 @@ main{
   grid-template-rows: .2fr 1fr .2fr;
   place-items: center;
   overflow: hidden;
-  animation: to-visible 6s forwards;
+  // animation: to-visible 6s forwards;
   gap: 2em;
 
   button{

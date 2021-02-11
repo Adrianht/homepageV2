@@ -11,7 +11,6 @@
   @include mobile{
     height: $height - 100px;
   }
-  @include animate(50vh, fade-in, 2s, cubic-bezier(0.500, 0.250, 0.480, 1.260));
 
   &.shade-1, &.shade-2{
     height: $height;
