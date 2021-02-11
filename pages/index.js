@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Main from '../components/Main'
-import Html from 'next/document';
+
 
 export default function Home() {
   return (

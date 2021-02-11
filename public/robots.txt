@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Host: https://www.adrianht.no/
+Sitemap: https://www.adrianht.no/sitemap.xml
