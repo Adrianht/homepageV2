@@ -41,6 +41,7 @@ h1, h2, h3{
   font-weight: 400;
   text-decoration: underline;
   text-underline-position: under;
+  margin: 0;
   margin-bottom: 12px;
 }
 
@@ -54,7 +55,6 @@ main{
   grid-template-rows: .2fr 1fr .2fr;
   place-items: center;
   overflow: hidden;
-  // animation: to-visible 6s forwards;
   gap: 2em;
 
   button{
@@ -127,14 +127,11 @@ main{
     grid-template-columns: 1fr;
     width: 100vw;
     height: 100vh;
+    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
     margin: 0;
     padding: 0;
     gap: .5em;
-
-    .previous-button{
-      grid-column: 1;
-      grid-row: 2;
-    }
 
     .info{
       grid-column: 1;
@@ -142,9 +139,16 @@ main{
       justify-content: space-evenly;
       padding-top: 1em;
     }
+
+    .previous-button{
+      grid-column: 1;
+      grid-row: 2;
+    }
+    
     .step-container{
       grid-column: 1;
       grid-row: 3;
+      height: 100%;
     }
 
     .next-button{

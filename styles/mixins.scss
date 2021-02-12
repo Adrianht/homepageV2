@@ -8,9 +8,6 @@
 @mixin card($height, $width, $bg-color1, $bg-color2){
   height: $height;
   width: $width;
-  @include mobile{
-    height: $height - 100px;
-  }
 
   &.shade-1, &.shade-2{
     height: $height;
